@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Estudo de Caso Bootstrap</title>
+</head>
+<body>
+    <h1>Verificação de carteira de motorista</h1>
+    <label for="idade">Idade:</label>
+    <lable type="number" ></lable>
+    <input type="number" min="0" max="100" id="idade"></input>
+    <button onclick="verificaIdade()">verificar</button>
+    <div id="resultado"></div>
+    <Script src="../js/exercicio2.js"></Script>
+</body>
+</html>
+<script>
+    function verificaIdade() {
+        var idade = document.getElementById('idade').value;
+        var resultado = document.getElementById('resultado');
+        
+        if (idade >= 21) {
+            resultado.innerHTML = "Você é elegível para obter uma carteira de motorista AB e D";
+        } else {
+            resultado.innerHTML = "Você não é elegível para obter uma carteira de motorista.";
+        }
+        if(idade >= 18){
+            resultado.innerHTML= "Você é elegível para obter uma carteira de motorista categoria AB";
+        }else{
+            resultado.innerHTML= "Você não é elegível para obter uma carteira de motorista categoria AB";
+        }
+    }
+    
+</script>
