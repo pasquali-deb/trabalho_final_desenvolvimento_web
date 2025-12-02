@@ -3,27 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>UPF Eventos</title>
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <link rel="shortcut icon" href="../img/logo_upf.png">
     <link rel="stylesheet" href="../css/estilo.css">
-
     <script src="../js/index.js"></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
-
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="index.html">UPF Eventos</a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Alternar navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -35,47 +29,52 @@
                     <li class="nav-item">
                         <a class="nav-link" href="fazer_inscricao.html">Inscrições</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                     </li>
                 </ul>
-
-                <form class="d-flex" role="search" onsubmit="return false;">
-                    <input id="campo-pesquisa"
-                           class="form-control me-2"
-                           type="search"
-                           placeholder="Pesquisar eventos..."
-                           aria-label="Pesquisar">
-                    <button class="btn btn-outline-light" type="button" id="btn-limpar-pesquisa">
-                        Limpar
-                    </button>
-                </form>
             </div>
         </div>
     </nav>
 </header>
-
 <main class="flex-grow-1">
     <section class="w-100 banner d-flex align-items-center">
         <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="text-white fw-bold mb-0">Evento Turma</h1>
-            <h1 class="text-white fw-bold mb-0">2025</h1>
         </div>
     </section>
-
     <section class="py-4">
-        <div class="container">
-            <div class="row w-100 d-flex justify-content-center">
-                <h1 class="titulo text-center">EVENTOS</h1>
-            </div>
+    <div class="container">
+        <div class="row w-100 d-flex justify-content-center mb-3">
+            <h1 class="titulo text-center">EVENTOS</h1>
         </div>
-    </section>
+        <div class="filtros-container">
+            <div class="filtro-item">
+                <form class="d-flex" role="search" onsubmit="return false;">
+                    <input id="campo-pesquisa"
+                           class="form-control input-gamer me-2"
+                           type="search"
+                           placeholder="Pesquisar eventos..."
+                           aria-label="Pesquisar">
 
-    <div class="d-flex justify-content-center mb-5">
-        <select id="ordenar-eventos" class="form-select w-auto">
-            <option value="data-asc">Data mais próxima</option>
-            <option value="data-desc">Data mais distante</option>
-            <option value="titulo-asc">Título A-Z</option>
-            <option value="titulo-desc">Título Z-A</option>
-        </select>
+                    <button class="btn btn-gamer" 
+                            type="button"
+                            id="btn-limpar-pesquisa">
+                        Limpar
+                    </button>
+                </form>
+            </div>
+            <div class="filtro-item">
+                <select id="ordenar-eventos" class="form-select input-gamer">
+                    <option value="data-asc">Data mais próxima</option>
+                    <option value="data-desc">Data mais distante</option>
+                    <option value="titulo-asc">Título A-Z</option>
+                    <option value="titulo-desc">Título Z-A</option>
+                </select>
+            </div>
+
+        </div>
     </div>
+</section>
 
     <!-- LISTA DE EVENTOS -->
     <section class="container container-eventos pb-5">
@@ -83,32 +82,35 @@
 
             <!-- EVENTO 01 -->
             <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent"
-                 data-id="1"
-                 data-titulo="UPF 2025"
-                 data-descricao="Workshop e palestras sobre tecnologia e inovação na UPF."
-                 data-inicio="2025-11-18T19:00:00"
-                 data-local="Passo Fundo - RS">
-                <div class="card-body">
-                    <img class="img-evento img-fluid rounded mb-3"
-                         src="../img/evento1.jpg"
-                         alt="Banner do evento UPF 2025">
+     data-id="1"
+     data-titulo="Copa FPS Universitária"
+     data-descricao="Campeonato presencial de FPS entre times universitários, com partidas de CS2 e Valorant."
+     data-inicio="2025-11-18T19:00:00"
+     data-local="Passo Fundo - RS">
+    <div class="card-body">
+       <img class="img-evento img-fluid rounded mb-3"
+     src="../img/copa-fps-universitaria.jpg"
+     alt="Copa FPS Universitária de CS2 e Valorant">
 
-                    <h3 class="h4">UPF 2025</h3>
-                    <p class="mb-1 text-muted small">
-                        <strong>Local:</strong> Passo Fundo - RS
-                    </p>
-                    <p class="mb-2">
-                        Workshop e palestras sobre tecnologia e inovação na UPF.
-                    </p>
+        <h3 class="h4">Copa FPS Universitária</h3>
+        <p class="mb-1 text-muted small">
+            <strong>Local:</strong> Passo Fundo - RS
+        </p>
+        <p class="mb-2">
+            Campeonato presencial de FPS entre equipes universitárias, com partidas de CS2 e Valorant,
+            estrutura profissional de arena e transmissão ao vivo.
+        </p>
+    
+
 
                     <p class="mb-1"><strong>Início:</strong> 18/11/2025 19:00</p>
                     <p class="text-muted small mb-2" data-contador="2025-11-18T19:00:00"></p>
 
                     <div class="d-flex w-100 justify-content-end mt-2">
-                        <button type="button"
-                                class="btn btn-info me-2 btn-detalhes">
-                            Detalhes
-                        </button>
+                        <a href="detalhes_evento.html?id=1"
+                         class="btn btn-info me-2 btn-detalhes">
+                        Detalhes
+                        </a>
                         <button type="button" class="btn btn-sm btn-outline-warning me-2 btn-favorito">
                             ⭐
                         </button>
@@ -121,32 +123,32 @@
 
             <!-- EVENTO 02 -->
             <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent"
-                 data-id="2"
-                 data-titulo="Conexão T.I"
-                 data-descricao="Conferência focada em tendências de TI e mercado de trabalho."
-                 data-inicio="2025-11-19T08:30:00"
-                 data-local="Passo Fundo - RS">
-                <div class="card-body">
-                    <img class="img-evento img-fluid rounded mb-3"
-                         src="../img/evento2.jpg"
-                         alt="Banner do evento Conexão T.I">
-
-                    <h3 class="h4">Conexão T.I</h3>
-                    <p class="mb-1 text-muted small">
-                        <strong>Local:</strong> Passo Fundo - RS
-                    </p>
-                    <p class="mb-2">
-                        Conferência focada em tendências de TI e mercado de trabalho.
-                    </p>
+     data-id="2"
+     data-titulo="Liga Battle Royale Online"
+     data-descricao="Campeonato online de Battle Royale com squads de Fortnite e Warzone."
+     data-inicio="2025-11-19T18:30:00"
+     data-local="Online">
+    <div class="card-body">
+        <img class="img-evento img-fluid rounded mb-3"
+     src="../img/liga-battle-royale.jpg"
+     alt="Liga Battle Royale Online com squads de Fortnite e Warzone">
+        <h3 class="h4">Liga Battle Royale Online</h3>
+        <p class="mb-1 text-muted small">
+            <strong>Local:</strong> Online
+        </p>
+        <p class="mb-2">
+            Campeonato totalmente online com squads de Fortnite e Warzone. Partidas ranqueadas,
+            chaveamento por eliminação dupla e premiação em dinheiro para os primeiros colocados.
+        </p>
 
                     <p class="mb-1"><strong>Início:</strong> 19/11/2025 08:30</p>
                     <p class="text-muted small mb-2" data-contador="2025-11-19T08:30:00" ></p>
 
                     <div class="d-flex w-100 justify-content-end mt-2">
-                        <button type="button"
-                                class="btn btn-info me-2 btn-detalhes">
-                            Detalhes
-                        </button>
+                        <a href="detalhes_evento.html?id=2"
+                         class="btn btn-info me-2 btn-detalhes">
+                        Detalhes
+                        </a>
                         <button type="button" class="btn btn-sm btn-outline-warning me-2 btn-favorito">
                             ⭐
                         </button>
@@ -158,37 +160,32 @@
             </div>
 
             <!-- EVENTO 03 -->
-            <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent"
-                 data-id="3"
-                 data-titulo="CodeCon 2025"
-                 data-descricao="Conferência de desenvolvimento de software e boas práticas."
-                 data-inicio="2025-11-20T09:00:00"
-                 data-local="São Paulo - SP">
-                <div class="card-body">
-                    <img class="img-evento img-fluid rounded mb-3"
-                         src="../img/evento2.jpg"
-                         alt="Banner do evento CodeCon 2025">
-
-                    <h3 class="h4">CodeCon 2025</h3>
-                    <p class="mb-1 text-muted small">
-                        <strong>Local:</strong> São Paulo - SP
-                    </p>
-                    <p class="mb-2">
-                        Conferência de desenvolvimento de software e boas práticas.
-                    </p>
-
+           <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent"
+     data-id="3"
+     data-titulo="Campeonato Mobile Arena"
+     data-descricao="Torneio focado em jogos mobile de arena 5x5, como Wild Rift e Mobile Legends."
+     data-inicio="2025-11-20T14:00:00"
+     data-local="São Paulo - SP">
+    <div class="card-body">
+       <img class="img-evento img-fluid rounded mb-3"
+     src="../img/campeonato-mobile-arena.jpg"
+     alt="Campeonato Mobile Arena de jogos MOBA 5x5">
+        <h3 class="h4">Campeonato Mobile Arena</h3>
+        <p class="mb-1 text-muted small">
+            <strong>Local:</strong> São Paulo - SP
+        </p>
+        <p class="mb-2">
+            Torneio presencial focado em jogos mobile de arena 5x5 (MOBA), com equipes semi-profissionais,
+            estrutura de palco e telões para o público acompanhar as partidas.
+        </p>
                     <p class="mb-1"><strong>Início:</strong> 20/11/2025 09:00</p>
                     <p class="text-muted small mb-2" data-contador="2025-11-20T09:00:00"></p>
 
                     <div class="d-flex w-100 justify-content-end mt-2">
-                        <a href="https://codecon.dev/" target="_blank"
-                           class="btn btn-outline-info me-2">
-                            Site oficial
+                        <a href="detalhes_evento.html?id=3"
+                         class="btn btn-info me-2 btn-detalhes">
+                        Detalhes
                         </a>
-                        <button type="button"
-                                class="btn btn-info me-2 btn-detalhes">
-                            Detalhes
-                        </button>
                         <button type="button" class="btn btn-sm btn-outline-warning me-2 btn-favorito">
                             ⭐
                         </button>
@@ -200,33 +197,34 @@
             </div>
 
             <!-- EVENTO 04 -->
-            <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent"
-                 data-id="4"
-                 data-inicio="2025-11-25T19:30:00"
-                 data-titulo="Semana Acadêmica UPF"
-                 data-descricao="Palestras, minicursos e mesas redondas sobre diversas áreas."
-                 data-local="Passo Fundo - RS">
-                <div class="card-body">
-                    <img class="img-evento img-fluid rounded mb-3"
-                         src="../img/evento1.jpg"
-                         alt="Banner da Semana Acadêmica UPF">
+           <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent"
+     data-id="4"
+     data-titulo="Festival Retro Games & Speedrun"
+     data-descricao="Festival de jogos retrô, speedruns e mini-campeonatos de clássicos."
+     data-inicio="2025-11-21T10:00:00"
+     data-local="Passo Fundo - RS">
+    <div class="card-body">
+       <img class="img-evento img-fluid rounded mb-3"
+     src="../img/festival-retro-speedrun.jpg"
+     alt="Festival Retro Games & Speedrun com jogos clássicos">
 
-                    <h3 class="h4">Semana Acadêmica UPF</h3>
-                    <p class="mb-1 text-muted small">
-                        <strong>Local:</strong> Passo Fundo - RS
-                    </p>
-                    <p class="mb-2">
-                        Palestras, minicursos e mesas redondas sobre diversas áreas.
-                    </p>
+        <h3 class="h4">Festival Retro Games & Speedrun</h3>
+        <p class="mb-1 text-muted small">
+            <strong>Local:</strong> Passo Fundo - RS
+        </p>
+        <p class="mb-2">
+            Evento voltado para fãs de jogos clássicos, com estações de consoles antigos,
+            desafios de speedrun e mini-campeonatos temáticos durante todo o dia.
+        </p>
 
                     <p class="mb-1"><strong>Início:</strong> 25/11/2025 19:30</p>
                     <p class="text-muted small mb-2" data-contador="2025-11-25T19:30:00"></p>
 
                     <div class="d-flex w-100 justify-content-end mt-2">
-                        <button type="button"
-                                class="btn btn-info me-2 btn-detalhes">
-                            Detalhes
-                        </button>
+                        <a href="detalhes_evento.html?id=4"
+                         class="btn btn-info me-2 btn-detalhes">
+                        Detalhes
+                        </a>
                         <button type="button" class="btn btn-sm btn-outline-warning me-2 btn-favorito">
                             ⭐
                         </button>
@@ -236,7 +234,8 @@
                     </div>
                 </div>
             </div>
-
+       
+</a>
         </div>
     </section>
 
@@ -244,9 +243,9 @@
     </section>
 </main>
 
-<footer class="bg-dark text-white d-flex justify-content-center py-3 mt-auto">
-    <p class="mb-0">Eventos Oficial</p>
-</footer>
+ <footer class="text-center text-light mt-5 py-3">
+        Liga Gamer UPF © 2025 — Todos os direitos reservados.
+    </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Evento - UPF Eventos</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../img/logo_upf.png">
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">UPF Eventos</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastrar_evento.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fazer_inscricao.html">Inscrições</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="flex-grow-1">
+    <div class="container py-4">
+        <a href="index.html" class="btn btn-link mb-3">&larr; Voltar para a lista de eventos</a>
+
+        <div id="card-detalhes" class="card shadow-sm">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img id="imagem-evento"
+                         src="../img/evento1.jpg"
+                         class="img-fluid h-100 w-100 object-fit-cover rounded-start"
+                         alt="Imagem do evento">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h1 id="titulo-evento" class="card-title h3 mb-3">
+                            Carregando evento...
+                        </h1>
+
+                        <p id="descricao-evento" class="card-text mb-3"></p>
+
+                        <ul class="list-unstyled mb-3">
+                            <li><strong>Local:</strong> <span id="local-evento"></span></li>
+                            <li><strong>Data de início:</strong> <span id="data-inicio-evento"></span></li>
+                            <li><strong>Data de encerramento:</strong> <span id="data-fim-evento"></span></li>
+                            <li><strong>Carga horária:</strong> <span id="carga-horaria-evento"></span></li>
+                            <li><strong>Valor:</strong> <span id="valor-evento"></span></li>
+                            <li><strong>Vagas disponíveis:</strong> <span id="vagas-evento"></span></li>
+                        </ul>
+
+                        <div id="mensagem-extra" class="text-muted small mb-3"></div>
+
+                        <div class="d-flex gap-2">
+                            <a href="fazer_inscricao.html" class="btn btn-dark">
+                                Fazer inscrição
+                            </a>
+                            <a href="index.html" class="btn btn-outline-secondary">
+                                Ver outros eventos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="erro-evento" class="alert alert-danger mt-3 d-none">
+            Evento não encontrado. Volte à página inicial e tente novamente.
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-white d-flex justify-content-center py-3 mt-auto">
+    <p class="mb-0">UPF Eventos &copy; 2025</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/detalhes_evento.js"></script>
+</body>
+</html>

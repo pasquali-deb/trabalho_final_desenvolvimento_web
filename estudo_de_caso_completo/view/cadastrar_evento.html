@@ -27,11 +27,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="fazer_inscricao.html">Inscrições</a>
                             </li>
+                            <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                     </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-                            <button class="btn btn-outline-light" type="submit">Pesquisar</button>
-                        </form>
+                       
                     </div>
                 </div>
             </nav>
@@ -51,6 +51,10 @@
                         <input type="number" class="form-control" min="1" name="carga_horaria" id="carga_horaria" required>
                     </div>
                     <div class="mb-3 col-12 col-md-6">
+                        <label for="vagas" class="form-label">Vagas</label>
+                        <input type="number" class="form-control" min="1" name="vagas" id="vagas" required>
+                    </div>
+                    <div class="mb-3 col-12 col-md-6">
                         <label for="valor" class="form-label">valor</label>
                         <input type="number" class="form-control" min="0" step="0.01" name="valor" id="valor" required>
                     </div>
@@ -67,12 +71,14 @@
                         <textarea class="form-control" name="descricao" id="descricao" rows="3" required></textarea>
                     </div>
                     <hr>
+                    
                     <div class="col-12 text-center">
                         <button class="btn btn-danger" id="btn_cancelar">Cancelar</button>
                         <button type="submit" class="btn btn-success" id="btn_envia_formulario_evento">Cadastrar</button>
                     </div>
                 </div>
             </form>
+            <div id="mensagem_evento" class="alert mt-3 d-none"></div>
         </div>
     </body>
 </html>
